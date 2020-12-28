@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/js/script.js">
+    <link rel="icon" type="image/png" href="assets/img/alfyando.png">
+    <title>Naive Bayes</title>
+    
+</head>
+<body>
+    <header>
+        <div class="top-wrapper">
+            <div class="container">
+              <h1 class="judul"><b>PREDIKSI PENGUNDURAN DIRI MAHASISWA UNIVERSITAS AMIKOM YOGYAKARTA MENGGUNAKAN METODE NAIVE BAYES<b></h1>
+              <h5>Sumber Jurnal: <a href="https://jurnal.umk.ac.id/index.php/simet/article/view/2967" target="_blank">klik disini!</a></h5>
+            </div>
+        </div>
+        <nav>
+            <a href="#probabilitasClass">Class</a>| 
+            <a href="#probabilitasKondisi">Kondisi</a>| 
+            <a href="#testing">Testing</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <article id="probabilitasClass" class="card">
+                <h2>Probabilitas Class</h2>
+                <p>Bertahan (45/84) = <b><span id="bertahan"></span></b></p>
+                <p>Mengundurkan Diri (39/84) =  <b><span id="md"></span></b></p>
+            </article>
+
+            <article id="probabilitasKondisi" class="card">
+                <h2>Probabilitas Kondisi</h2>
+                <p>Laki-laki Bertahan (39/45) = <b></b><span id="l_bertahan"></span></b></p>
+                <p>Perempuan Bertahan (6/45) =  <b><span id="p_bertahan"></span></b></p>
+                <p>Laki-laki MD (36/39) = <b><span id="l_md"></span></b></p>
+                <p>Perempuan MD (3/39) =  <b><span id="p_md"></span></b></p>
+                <p>Masa Studi 2 Bertahan (25/45) = <b><span id="masa_studi_2_bertahan"></span></b></p>
+                <p>Masa Studi 4 Bertahan (20/45) =  <b><span id="masa_studi_4_bertahan"></span></b></p>
+                <p>Masa Studi 2 MD (21/39) = <b><span id="masa_studi_2_md"></span></b></p>
+                <p>Masa Studi 4 MD (18/39) =  <b><span id="masa_studi_4_md"></span></b></p>
+                <p>IPK kurang dr 2 Bertahan (2/45) = <b><span id="ipk_1_2_bertahan"></span></b></p>
+                <p>IPK kurang dr 3 Bertahan (14/45) = <b><span id="ipk_2_3_bertahan"></span></b></p>
+                <p>IPK kurang dr sama dengan 4 Bertahan (29/45) = <b><span id="ipk_3_4_bertahan"></span></b></p>
+                <p>IPK kurang dr 2 MD (9/39) = <b><span id="ipk_1_2_md"></span></b></p>
+                <p>IPK kurang dr 3 MD (17/39) = <b><span id="ipk_2_3_md"></span></b></p>
+                <p>IPK kurang dr sama dengan 4 MD (13/39) = <b><span id="ipk_3_4_md"></span></b></p>
+            </article>
+
+            <article id="testing" class="card">
+                <section>
+                    <h2>Data Testing</h2>
+                    <p></p>
+                    <p>Masukkan Jenis Kelamin [L/P]: </p>
+                    <input class="form-control" type="text" id="jk">
+                    <p>Masukkan Masa Studi [2/4]: </p>
+                    <input class="form-control" type="number" id="ms">
+                    <p>Masukkan IPK [1..4]: </p>
+                    <input class="form-control" type="number" id="ipk">
+                    <br>
+                    <button onclick="hitung()">Submit</button>
+                </section>
+                <section>
+                    <br>
+                    <p>Kemungkinan Bertahan = <b><span id="k_bertahan"></span></b></p>
+                    <p>Kemungkinan Mengundurkan Diri = <b><span id="k_md"></span></b></p>
+                    <p>Hasil Prediksi = <b><span id="hasil"></span></b></p>
+                </section>
+            </article>
+        </div>
+        
+        <aside class="profile">
+            <article class="card">
+                <header>
+                <figure>
+                    <img src="assets/img/alfyando.png" alt="alfyando">
+                    <figcaption>MUHAMMAD ALFYANDO</figcaption>
+                    <br>
+                    <button onclick="tentangSaya()">About me!</button>
+                </figure>
+                </header>
+            </article>
+        </aside>
+    </main>
+
+    <footer id="foot">
+        <p>Naive Bayes</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
